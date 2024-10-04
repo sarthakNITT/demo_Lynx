@@ -73,6 +73,11 @@ export const sendStudentOTP = async token => {
         '@nitt.edu',
     };
   } catch (error) {
+  if (error.response && error.response.data) {
     return {status: false, message: error.response.data.message};
+  } else {
+    return {status: false, message: error.message || 'Something went wrong'};
   }
+}
+
 };
