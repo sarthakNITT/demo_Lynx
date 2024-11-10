@@ -2,7 +2,7 @@ import {action, computed, makeObservable, observable} from 'mobx';
 
 class API {
   state = {
-    baseUrl: '',
+    baseUrl: 'https://api.lynx.spider.nitt.edu',
     cdn: '',
   };
 
